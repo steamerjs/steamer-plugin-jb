@@ -16,4 +16,3 @@ steamer jb
 * type
 	- online, jb 服务器构建
 	- offline, jb 本地构建
-
