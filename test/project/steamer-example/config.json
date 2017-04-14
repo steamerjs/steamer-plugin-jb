@@ -1,0 +1,32 @@
+{
+    "allowext": [
+        "png",
+        "jpg",
+        "jpeg",
+        "gif",
+        "js",
+        "css",
+        "html",
+        "htm",
+        "manifest",
+        "swf",
+        "ico"
+    ],
+    "rules": {
+        "cdn": {
+            "source": "./dist/cdn",
+            "target": "./cdn/",
+            "recursive": 1
+        },
+        "websever": {
+            "source": "./dist/webserver",
+            "target": "./webserver/",
+            "recursive": 1
+        },
+        "offline": {
+            "source": "./dist/offline",
+            "target": "offline.zip",
+            "recursive": 1
+        }
+    }
+}
