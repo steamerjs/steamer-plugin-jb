@@ -11,11 +11,12 @@ function JBPlugin(argv) {
 }
 
 JBPlugin.prototype.init = function() {
-	// console.log(this.argv);
-
 	this.askType();
 };
 
+/**
+ * ask build type
+ */
 JBPlugin.prototype.askType = function() {
 	inquirer.prompt([{
 		type: 'list',
@@ -40,6 +41,10 @@ JBPlugin.prototype.askType = function() {
 	});
 };
 
+/**
+ * build config
+ * @param  {String} type [build type]
+ */
 JBPlugin.prototype.buildConfig = function(type) {
 	if (type === 'offline') {
 		this.buildOffline();
@@ -49,13 +54,19 @@ JBPlugin.prototype.buildConfig = function(type) {
 	}
 };
 
-JBPlugin.prototype.buildOffline = function(type) {
+/**
+ * build config for offline type
+ */
+JBPlugin.prototype.buildOffline = function() {
 	let configJson = require('./template/config.json');
 
 	fs.writeFileSync(path.join(process.cwd(), 'config.json'), JSON.stringify(configJson, null, 4), "utf-8");
 };
 
-JBPlugin.prototype.buildOnline = function(type) {
+/**
+ * build config for online type
+ */
+JBPlugin.prototype.buildOnline = function() {
 
 	let projectJs = require('./template/project.js');
 	projectJs.name = this.pkgJson.name || projectJs.name;
@@ -65,25 +76,19 @@ JBPlugin.prototype.buildOnline = function(type) {
 		name: 'bid',
 		message: "please input offline bid",
 	}]).then((answers) => {
-	    let bid = answers.bid || null;
+	    let bid = answers.bid || "";
 	    
-	    if (bid) {
-	    	projectJs.offline.bid = bid;
-	    	fs.writeFileSync(path.join(process.cwd(), 'project.js'), JSON.stringify(projectJs, null, 4), "utf-8");
-	    }
+    	projectJs.offline.bid = bid;
+    	fs.writeFileSync(path.join(process.cwd(), 'project.js'), "module.exports = " + JSON.stringify(projectJs, null, 4), "utf-8");
 	});
 	
 };
 
+/**
+ * [help]
+ */
 JBPlugin.prototype.help = function() {
-	this.utils.printUsage('steamer plugin example', 'example');
-	this.utils.printOption([
-		{
-			option: "list",
-			alias: "l",
-			description: "list examples"
-		},
-	]);
+	this.utils.printUsage('jb config creator', 'jb');
 };
 
 module.exports = JBPlugin;
