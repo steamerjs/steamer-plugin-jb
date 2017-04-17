@@ -12,8 +12,8 @@
             "recursive" : 1
         },
         "offline" : {
-            "source" : "./dist/offline",
-            "target" : "offline.zip",
+            "source" : "./dist/offline.zip",
+            "target" : "./offline/offline.zip",
             "recursive" : 1
         }
     }
