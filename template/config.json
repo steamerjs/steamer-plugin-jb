@@ -1,5 +1,5 @@
 {
-    "allowext" : ["png", "jpg", "jpeg", "gif", "js", "css", "html", "htm", "manifest", "swf", "ico"],
+    "allowext" : ["png", "jpg", "jpeg", "gif", "js", "css", "html", "htm", "manifest", "swf", "ico", "ogv", "ogg", "mp4", "webm"],
     "rules" : {
         "cdn" : {
             "source" : "./dist/cdn",
