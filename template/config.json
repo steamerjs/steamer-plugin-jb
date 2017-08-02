@@ -2,19 +2,22 @@
     "allowext" : ["png", "jpg", "jpeg", "gif", "js", "css", "html", "htm", "manifest", "swf", "ico", "ogv", "ogg", "mp4", "webm"],
     "rules" : {
         "cdn" : {
-            "source" : "./dist/cdn",
+            "source" : "./dist/cdn/",
             "target" : "./cdn/",
-            "recursive" : 1
+            "recursive" : 1,
+            "compress": 0
         },
         "websever" : {
-            "source" : "./dist/webserver",
+            "source" : "./dist/webserver/",
             "target" : "./webserver/",
-            "recursive" : 1
+            "recursive" : 1,
+            "compress": 0
         },
         "offline" : {
             "source" : "./dist/offline.zip",
             "target" : "./offline/offline.zip",
-            "recursive" : 1
+            "recursive" : 1,
+            "compress": 0
         }
     }
 }

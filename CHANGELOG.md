@@ -1,3 +1,6 @@
+## 1.0.4
+	- 更新 steamer-pluginutils
+
 ## 1.0.3
 	- 更新 steamer-pluginutils
 
