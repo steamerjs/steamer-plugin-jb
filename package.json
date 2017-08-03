@@ -1,6 +1,6 @@
 {
   "name": "steamer-plugin-jb",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "steamer-plugin-jb",
   "main": "index.js",
   "bin": "index.js",
@@ -26,7 +26,7 @@
   "dependencies": {
     "chalk": "^2.0.1",
     "inquirer": "^3.0.6",
-    "steamer-pluginutils": "^1.2.6"
+    "steamer-pluginutils": "^1.3.0"
   },
   "devDependencies": {
     "codecov.io": "^0.1.6",
