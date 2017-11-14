@@ -1,4 +1,4 @@
-## steamer-plugin-jb
+# steamer-plugin-jb
 
 捷豹系统快速配置
 
@@ -7,7 +7,9 @@
 [![Deps](https://david-dm.org/steamerjs/steamer-plugin-jb.svg)](https://david-dm.org/steamerjs/steamer-plugin-jb)
 [![Coverage](https://img.shields.io/coveralls/steamerjs/steamer-plugin-jb.svg)](https://coveralls.io/github/steamerjs/steamer-plugin-jb)
 
-#### 使用
+## 使用
+
+### 初始化配置
 
 ```javascript
 steamer jb
@@ -16,3 +18,43 @@ steamer jb
 * type
 	- online, jb 服务器构建
 	- offline, jb 本地构建
+
+
+### 添加 JB 部署单 ID(仅支持GIT)
+
+```javascript
+// 给当前分支添加部署id
+steamer jb --add id
+
+// 给特定分支添加部署id
+steamer jb --add branch=id
+
+// 可用 -a 简写 
+```
+
+示例配置，位置在项目的 `.steamer/steamer-plugin-jb`
+
+```javascript
+module.exports = {
+    "plugin": "steamer-plugin-jb",
+    "config": {
+        "git": {
+            "master": "R009082",
+            "develop": "R008348"
+        }
+    }
+};
+```
+
+### 根据 JB 分支和部署单 ID 进行捷豹部署（仅支持GIT）
+* 注意，请务必在配置中存有该分支的部署单ID，部署单一般都以 `R`开头，如 `R009082`，否则会报错
+
+```javascript
+// 给当前分支部署
+steamer jb --run
+
+// 给特定分支部署
+steamer jb --run branch
+
+// 可用 -r 简写
+```
