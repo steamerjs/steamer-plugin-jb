@@ -24,15 +24,15 @@ steamer jb
 
 ```javascript
 // 给当前分支添加部署id
-steamer jb --add id
+steamer jb --add [id]
 
 // 给特定分支添加部署id
-steamer jb --add branch=id
+steamer jb --add [branch]=[id]
 
 // 可用 -a 简写 
 ```
 
-示例配置，位置在项目的 `.steamer/steamer-plugin-jb`
+示例配置，位置在项目的 `.steamer/steamer-plugin-jb.js`
 
 ```javascript
 module.exports = {
@@ -46,15 +46,15 @@ module.exports = {
 };
 ```
 
-### 根据 JB 分支和部署单 ID 进行捷豹部署（仅支持GIT）
-* 注意，请务必在配置中存有该分支的部署单ID，部署单一般都以 `R`开头，如 `R009082`，否则会报错
+### 根据 JB 分支和部署单 ID 进行捷豹部署(仅支持GIT)
+* 注意，请务必在配置中存有该分支的部署单ID，部署单一般都以 `R` 开头，如 `R009082`，否则会报错
 
 ```javascript
 // 给当前分支部署
 steamer jb --run
 
 // 给特定分支部署
-steamer jb --run branch
+steamer jb --run [branch]
 
 // 可用 -r 简写
 ```
