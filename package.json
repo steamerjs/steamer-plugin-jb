@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/steamerjs/steamer-plugin-jb#readme",
   "dependencies": {
-    "chalk": "^2.0.1",
-    "inquirer": "^3.0.6",
+    "chalk": "^2.3.0",
+    "inquirer": "^4.0.0",
     "lodash.merge": "^4.6.0",
     "request": "^2.83.0",
-    "simple-git": "^1.81.1",
+    "simple-git": "^1.82.0",
     "steamer-plugin": "^1.0.0"
   },
   "devDependencies": {
