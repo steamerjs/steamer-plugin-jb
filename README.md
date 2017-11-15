@@ -10,7 +10,7 @@
 ## 使用
 
 ### 安装 steamerjs
-以下命令全局安装 `steamerjs`，使用时如遇到问题，可先参见文档[常见问题](https://steamerjs.github.io/docs/introduction/Steamer-QA.html)，可能是没设置好 `NODE_PATH`
+以下命令全局安装 `steamerjs`，使用时如遇到问题，可先参见文档[[常见问题]](https://steamerjs.github.io/docs/introduction/Steamer-QA.html)，可能是没设置好 `NODE_PATH`
 
 ```javascript
 npm i -g steamerjs
