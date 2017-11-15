@@ -7,15 +7,18 @@
 [![Deps](https://david-dm.org/steamerjs/steamer-plugin-jb.svg)](https://david-dm.org/steamerjs/steamer-plugin-jb)
 [![Coverage](https://img.shields.io/coveralls/steamerjs/steamer-plugin-jb.svg)](https://coveralls.io/github/steamerjs/steamer-plugin-jb)
 
-## 使用
-
-### 安装 steamerjs
-以下命令全局安装 `steamerjs`，使用时如遇到问题，可先参见文档[[常见问题]](https://steamerjs.github.io/docs/introduction/Steamer-QA.html)，可能是没设置好 `NODE_PATH`
+## 安装
+以下命令全局安装 `steamerjs` 或 `steamer-plugin-jb`，使用时如遇到问题，可先参见文档[[常见问题]](https://steamerjs.github.io/docs/introduction/Steamer-QA.html)，可能是没设置好 `NODE_PATH`
 
 ```javascript
+// 必须
 npm i -g steamerjs
+
+// v2.0 后可选
+npm i -g steamer-plugin-kit
 ```
 
+## 使用
 ### 初始化配置
 
 ```javascript
