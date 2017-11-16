@@ -14,8 +14,7 @@
 // 必须
 npm i -g steamerjs
 
-// v2.0 后可选
-npm i -g steamer-plugin-kit
+npm i -g steamer-plugin-jb
 ```
 
 ## 使用
