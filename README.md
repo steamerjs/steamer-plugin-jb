@@ -17,6 +17,8 @@ npm i -g steamerjs
 npm i -g steamer-plugin-jb
 ```
 
+* 注意：本插件依赖于 `git`，因此请在全局安装 [git](https://git-scm.com/downloads)
+
 ## 使用
 ### 初始化配置
 
