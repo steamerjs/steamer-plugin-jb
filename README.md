@@ -14,9 +14,10 @@
 // 必须
 npm i -g steamerjs
 
-// v2.0 后可选
-npm i -g steamer-plugin-kit
+npm i -g steamer-plugin-jb
 ```
+
+* 注意：本插件依赖于 `git`，因此请在全局安装 [git](https://git-scm.com/downloads)
 
 ## 使用
 ### 初始化配置
