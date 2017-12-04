@@ -153,6 +153,7 @@ describe('add deploy id', function(cb) {
         }).catch((e) => {
             console.log(e);
             gitStub.restore();
+            infoStub.restore();
             cb();
         });
     });
@@ -175,6 +176,7 @@ describe('add deploy id', function(cb) {
             infoStub.restore();
             cb();
         }).catch((e) => {
+            infoStub.restore();
             cb();
         });
     });
@@ -232,6 +234,9 @@ describe('start deploying', function(cb) {
             infoStub.restore();
             cb();
         }).catch((e) => {
+            deployRequestStub.restore();
+            gitStub.restore();
+            infoStub.restore();
             cb();
         });
     });
@@ -254,6 +259,8 @@ describe('start deploying', function(cb) {
             infoStub.restore();
             cb();
         }).catch((e) => {
+            deployRequestStub.restore();
+            infoStub.restore();
             cb();
         });
     });
@@ -266,16 +273,19 @@ describe('start deploying', function(cb) {
             token: 'ASdxseRTSXfiGUIxnuRisTU'
         };
 
-        let requestStub = sinon.stub(jb.request, 'post').yields(null, null, JSON.stringify({ code: 0 })),
-            infoStub = sinon.stub(jb, 'sucess');
+        let requestStub = sinon.stub(jb.request, 'post').yields(null, null, JSON.stringify({ code: 0 }));
+        let successStub = sinon.stub(jb, 'success');
 
         jb.deployRequest(deployConfig).then((result) => {
-            expect(infoStub.calledWith('Deploying success!'));
+            expect(successStub.calledWith('Deploying success!'));
             expect(result).to.eql('success');
+            successStub.restore();
             requestStub.restore();
             cb();
         }).catch((e) => {
             console.log(e);
+            successStub.restore();
+            requestStub.restore();
             cb();
         });
     });

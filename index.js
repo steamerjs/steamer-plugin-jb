@@ -19,7 +19,7 @@ class JBPlugin extends SteamerPlugin {
         this.argv = args;
         this.git = git;
         this.pluginName = 'steamer-plugin-jb';
-        this.description = 'create config for alloyteam JB system';
+        this.description = 'commands for AlloyTeam JB system';
 
         this.request = request;
     }
