@@ -49,7 +49,7 @@ class JBPlugin extends SteamerPlugin {
 
     addDeployId(keyvalue) {
         return new Promise((resolve, reject) => {
-            let id = (keyvalue + '').split('=');
+            let id = (String(keyvalue)).split('=');
             let config = this.readPluginConfig(),
                 gitConfig = config.git || {};
 
